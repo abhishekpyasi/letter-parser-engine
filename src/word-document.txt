@@ -1,0 +1,38 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore 
+ magna aliqua. Ut enim ad minim veniam, quis nostrud 
+ exercitation ullamco laboris nisi ut aliquip ex ea 
+ commodo consequat. Duis aute irure dolor in 
+ reprehenderit in voluptate velit esse cillum dolore eu 
+ fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+  non proident, sunt in culpa qui officia deserunt mollit
+anim id est laborum.
+
+{IF |age| > 21  THEN}
+    This is conditional text
+    |text for grownups|
+    {IF |name| > "varun"  THEN}
+        Hello VArun pariatur |vp|
+    {EndIF}
+{ELSEIF |age < 18|  THEN}
+    This text is for minors.
+    |text for kids|
+{ENDIF}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore 
+ magna aliqua. Ut enim ad minim veniam, quis nostrud 
+ 
+ {IF |age| > 21  THEN}
+    exercitation ullamco laboris nisi ut aliquip ex ea 
+ commodo consequat. Duis aute irure dolor in 
+    |text for grownups|
+{ELSEIF |age < 18|  THEN}
+    This text is for minors.
+    |text for kids|
+
+{ENDIF}
+ reprehenderit in voluptate velit esse cillum dolore eu 
+ fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+  non proident, sunt in culpa qui officia deserunt mollit
+an
