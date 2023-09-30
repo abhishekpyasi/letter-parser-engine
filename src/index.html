@@ -1,23 +1,19 @@
 <html>
-
-<head>
-   
+  <head>
     <script>
-
-        var utils = {
-            printCollection: function (type, collection) {
-                if (collection) {
-                    for (const match of collection) {
-                        console.log(`${type} found: ${match}`);
-                    }
-                } else {
-                    console.log(`No ${type} found.`);
-                }
+      var utils = {
+        printCollection: function (type, collection) {
+          if (collection) {
+            for (const match of collection) {
+              console.log(`${type} found: ${match}`);
             }
-        };
+          } else {
+            console.log(`No ${type} found.`);
+          }
+        },
+      };
 
-
-var templateText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      var templateText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore 
 magna aliqua. Ut enim ad minim veniam, quis nostrud 
 exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -27,7 +23,7 @@ fugiat nulla pariatur. Excepteur sint occaecat cupidatat
  non proident, sunt in culpa qui officia deserunt mollit
 anim id est laborum.
 
-{IF |age| > 21  THEN}
+{IF |solfj| > 21  THEN}
    This is conditional text
    |text for grownups|
    {IF |name| > "varun"  THEN}
@@ -54,14 +50,11 @@ reprehenderit in voluptate velit esse cillum dolore eu
 fugiat nulla pariatur. Excepteur sint occaecat cupidatat
  non proident, sunt in culpa qui officia deserunt mollit
 an`;
-
     </script>
-    <script  src="letter-parser.js"></script>
-</head>
+    <script src="letter-parser.js"></script>
+  </head>
 
-<body>
+  <body>
     A letter parser
-    
-</body>
-
+  </body>
 </html>

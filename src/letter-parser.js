@@ -6,10 +6,12 @@ function letterParser(templateText) {
     const matchesControls = templateText.match(rg_controls);
     return { expressions: matchesExpressions, controls: matchesControls };
 }
+    
+
     //1. Find out control's parent expression
     //example pass the control name |age| and identify expressions contain this
     //a {IF |age| > 21  THEN}
-    //b {ELSEIF |age < 18|  THEN}
+    //b {ELSEIF |age < 18|  THEN} 
 
   /*
     Control name -> control value
@@ -34,17 +36,34 @@ function letterParser(templateText) {
     //expression evaluate
 
 
-
-
-
 var result = letterParser(templateText);
-utils.printCollection("Exp", result.expressions);
-utils.printCollection("Exp", result.expressions);
+//utils.printCollection("Exp", result.expressions);
+//utils.printCollection("Exp", result.controls);
+console.log(result.expressions)
 
-//var GetHidenControls = function (controlName, controlValue){
-//     console.log("hello");
-// };
-// var GetVisibleControls = function (controlName, controlValue){
-//     console.log("hello");
-// };
+// supposed this to just  get controll value for which we have to get parent expression
+let firstMatchingControl = result.controls[2];
 
+//to find expression with matching controll
+let rg_controls = `/\\|${firstMatchingControl}\\|/g`;
+let value = result.expressions.filter(exp => exp.match(rg_controls))
+console.log(value); 
+
+
+
+// Find the parent expression for the matching control
+const index = result.expressions.indexOf(value[0]);
+
+console.log(index);
+
+const stack = [];
+for( let i = index;i < result.expressions.length;i++){
+    stack.push(result.expressions[i]);
+    while(stack.length !== 0){
+      if(result.expressions[i] === `\\b${wordToFind}\\b`){
+        stack.push(result.expressions[i]);
+        i++;
+      }
+      else
+    }
+}
