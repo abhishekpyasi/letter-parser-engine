@@ -4,6 +4,19 @@
    
     <script>
 
+        var utils = {
+            printCollection: function (type, collection) {
+                if (collection) {
+                    for (const match of collection) {
+                        console.log(`${type} found: ${match}`);
+                    }
+                } else {
+                    console.log(`No ${type} found.`);
+                }
+            }
+        };
+
+
 var templateText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore 
 magna aliqua. Ut enim ad minim veniam, quis nostrud 
